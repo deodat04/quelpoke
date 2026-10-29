@@ -45,3 +45,17 @@ ou `gcloud auth login` puis renseigner la bonne adresse mail
 ## Process kubernetes
 - Appliquer un objet après l'avoir créé dans le fichier yaml
 `kubectl apply -f namespace.yaml`
+
+## Quelques commandes utiles
+
+`kubectl get namespaces`
+
+`kubectl get pods -n deodat`
+
+`kubectl port-forward service/quelpoke 8080:8080 -n deodat`
+
+`kubectl config set-context --current --namespace=deodat`
+
+`kubectl logs <nom de pod> -n deodat`
+
+- 
