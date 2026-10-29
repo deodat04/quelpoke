@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: quelpoke
+  namespace: deodat
+  labels:
+    app.kubernetes.io/name: quelpoke
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: quelpoke
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+      protocol: TCP
