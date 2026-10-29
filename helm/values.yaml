@@ -1,0 +1,18 @@
+replicaCount: 1
+
+image:
+  repository: europe-west9-docker.pkg.dev/cs-poc-hpzdycpiqjyvinhrczvlwcn/student-deodat/quelpoke-go
+  tag: "1.1"
+
+service:
+  port: 8080
+
+resources:
+  requests:
+    memory: 52Mi
+    cpu: 50m
+
+httproute:
+  gatewayName: external-http-gateway
+  gatewayNamespace: infra
+  hostname: quelpoke.copy-paste.pro
