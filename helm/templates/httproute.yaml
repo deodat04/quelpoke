@@ -15,7 +15,7 @@ spec:
     - matches:
         - path:
             type: PathPrefix
-            value: /
+            value: /deodat
       backendRefs:
         - name: {{ .Chart.Name }}
           port: {{ .Values.service.port }}
